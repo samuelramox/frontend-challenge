@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { SubHeader, LinkButton } from 'components'
+import { LinkButton, SubHeader } from 'components'
 import { SomosClient } from 'utils'
 
 import styles from './Home.module.css'

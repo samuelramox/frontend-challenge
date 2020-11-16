@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import { Layout } from 'components'
-import { Home, Artist, Search } from 'views'
+import { Artist, Home, Search } from 'views'
 
 import './App.module.css'
 

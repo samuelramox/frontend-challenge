@@ -1,14 +1,14 @@
+import React from 'react'
 import PropTypes from 'prop-types'
-import React, { Component } from 'react'
 
-import { Footer } from 'plurall-footer'
 import NavBar from 'plurall-header'
+import { Footer } from 'plurall-footer'
 
 import { getToken, setToken, SomosClient } from 'utils'
 
 import styles from './Layout.module.css'
 
-class Layout extends Component {
+class Layout extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
   }
