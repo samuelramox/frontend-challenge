@@ -18,13 +18,25 @@ class AlbumsList extends React.Component {
 
   render() {
     const { albums } = this.props
+    const sortedAlbums =
+      !!albums.length &&
+      albums
+        .map(album => {
+          return {
+            id: album.id,
+            images: album.images,
+            name: album.name,
+            release_date: new Date(album.release_date),
+          }
+        })
+        .sort((a, b) => b.release_date - a.release_date)
 
     return (
       <div className={styles.wrapper}>
         <Heading>Albums:</Heading>
         <div className={styles.albumWrapper}>
-          {!!albums.length &&
-            albums.map(album => (
+          {sortedAlbums &&
+            sortedAlbums.map(album => (
               <div className={styles.albumContainer} key={album.id}>
                 <ImageCard item={album} />
                 <Text secondary>{album.name}</Text>
