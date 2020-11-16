@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import AlbumsList from './index'
 
 describe('AlbumsList', () => {
-  const albums = [
+  const props = [
     {
       name: 'Rebel Heart Tour (Live)',
       release_date: '2017-09-15',
@@ -20,7 +20,7 @@ describe('AlbumsList', () => {
   ]
 
   it('should show ImageCard in AlbumsList if prop albums exists', () => {
-    const wrapper = shallow(<AlbumsList albums={albums} />)
+    const wrapper = shallow(<AlbumsList albums={props} />)
 
     expect(wrapper.find('ImageCard')).toHaveLength(1)
   })
