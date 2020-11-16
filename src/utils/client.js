@@ -1,8 +1,6 @@
 import { clearToken, getToken } from 'utils'
 
 class SomosClient {
-  constructor() {}
-
   onError = error => {
     console.warn(error)
     clearToken()

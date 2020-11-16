@@ -13,13 +13,11 @@ class Layout extends React.Component {
     children: PropTypes.node.isRequired,
   }
 
+  state = {}
+
   client = new SomosClient({
     accessToken: getToken(),
   })
-
-  state = {}
-
-  componentDidMount() {}
 
   handleLogout = path => {
     setToken('')

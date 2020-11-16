@@ -26,8 +26,9 @@ class Artist extends React.Component {
 
   async getArtist(artistId) {
     const res = await this.client.getArtistById(artistId)
+    const hasArtist = res !== undefined
 
-    res !== undefined
+    hasArtist
       ? this.setState({ artist: res, isLoading: false })
       : this.setState({
           error: res.error,
@@ -37,8 +38,9 @@ class Artist extends React.Component {
 
   async getAlbums(artistId) {
     const res = await this.client.getArtistAlbums(artistId)
+    const hasAlbum = res !== undefined
 
-    res !== undefined
+    hasAlbum
       ? this.setState({ albums: res.items, isLoading: false })
       : this.setState({
           error: res.error,

@@ -20,8 +20,9 @@ class Search extends React.Component {
     if (value.length > 4) {
       this.setState({ isLoading: true })
       const res = await this.client.getArtists(value)
+      const hasArtists = res && res.artists
 
-      res && res.artists
+      hasArtists
         ? this.setState({ artists: res.artists.items, isLoading: false })
         : this.setState({
             error: res.error,
