@@ -9,7 +9,7 @@ import { ImageCard } from 'components'
 import styles from './ArtistsList.module.css'
 
 class ArtistsList extends React.Component {
-  async onSelect(artistId) {
+  onSelect(artistId) {
     this.props.history.push(`/artist/${artistId}`)
   }
 
