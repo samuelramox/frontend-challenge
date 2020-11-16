@@ -28,6 +28,10 @@
   width: 100%;
 }
 
+.infoSection {
+  display: flex;
+}
+
 .info {
-  margin: 10px;
+  margin: 10px 40px 0 0;
 }

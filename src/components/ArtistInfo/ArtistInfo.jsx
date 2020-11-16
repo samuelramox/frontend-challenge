@@ -24,22 +24,24 @@ class ArtistInfo extends Component {
         </div>
         <div className={styles.artistDetails}>
           <Heading>{artist.name}</Heading>
-          <span className={styles.info}>
-            <Text secondary size="big">
-              Popularidade:
-            </Text>
-            <Text size="big">{artist.popularity}</Text>
-          </span>
-          <span className={styles.info}>
-            <Text secondary size="big">
-              Gêneros:
-            </Text>
-            {artist.genres.map((gender, index) => (
-              <Text size="big" key={index}>
-                {gender},
+          <div className={styles.infoSection}>
+            <span className={styles.info}>
+              <Text secondary size="big">
+                Popularidade:
               </Text>
-            ))}
-          </span>
+              <Text size="big">{artist.popularity}</Text>
+            </span>
+            <span className={styles.info}>
+              <Text secondary size="big">
+                Gêneros:
+              </Text>
+              {artist.genres.map((gender, index) => (
+                <Text size="big" key={index}>
+                  {gender},
+                </Text>
+              ))}
+            </span>
+          </div>
         </div>
       </div>
     )
